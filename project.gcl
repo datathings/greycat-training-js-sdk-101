@@ -1,0 +1,37 @@
+var people: nodeList<String>;
+
+fn main() {
+  people ?= nodeList<String>::new();
+}
+
+@expose
+fn helloWorld() {
+  println("Hello, world!");
+}
+
+@expose
+fn getArrayOfIntegers(): Array<int> {
+  return [1, 7, int::max];
+}
+
+@expose
+fn greet(firstName: String, lastName: String): String {
+  var greeting = "Hello, ${firstName} ${lastName}!";
+  println(greeting);
+  return greeting;
+}
+
+@expose
+@write
+fn addPeople(name: String) {
+  people.add(name);
+}
+
+@expose
+fn getPeople(): Array<String> {
+  var res = Array<String>::new(people.size());
+  for (index, value in people) {
+    res[index] = value;
+  }
+  return res;
+}

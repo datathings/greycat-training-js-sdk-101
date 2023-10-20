@@ -1,0 +1,8 @@
+{
+  "name": "training-js-101",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@greycat/sdk": "https://get.greycat.io/files/sdk/js/dev/6.4/6.4.7-dev.tgz"
+  }
+}
